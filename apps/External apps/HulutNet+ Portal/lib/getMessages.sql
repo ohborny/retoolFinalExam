@@ -1,0 +1,1 @@
+select * from support_messages where thread_id = {{ selectedThread.value.data.id }}
