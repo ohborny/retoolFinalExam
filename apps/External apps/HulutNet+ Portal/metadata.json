@@ -1,0 +1,41 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "9fe87976-b26b-11ef-9768-c72256f2ff8c",
+  "appTemplate": {
+    "pageCodeFolders": {
+      "object": {
+        "page1": {
+          "array": []
+        },
+        "page2": {
+          "array": []
+        },
+        "settings": {
+          "array": []
+        },
+        "settingsPage": {
+          "array": []
+        },
+        "landingPage": {
+          "array": []
+        },
+        "assetPage": {
+          "array": []
+        },
+        "manageAssetsPage": {
+          "array": []
+        },
+        "assetMetricsPage": {
+          "array": []
+        },
+        "chatAssistPage": {
+          "array": []
+        }
+      }
+    },
+    "rootScreen": "landingPage",
+    "version": "3.125.0",
+    "experimentalDataTabEnabled": true
+  }
+}
