@@ -1,0 +1,19 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "c23dd286-b1c7-11ef-9854-c7f1364e40ff",
+  "appTemplate": {
+    "appThemeId": 125733,
+    "notificationsSettings": {
+      "object": {
+        "globalQueryShowFailureToast": true,
+        "globalQueryShowSuccessToast": false,
+        "globalQueryToastDuration": 4.5
+      }
+    },
+    "appThemeName": "EO HuluNet+",
+    "shortlink": "reset-password",
+    "version": "3.124.0",
+    "experimentalDataTabEnabled": true
+  }
+}
