@@ -49,7 +49,7 @@
       <Option id="1eaf1" value="New" />
     </Select>
     <Date
-      id="date1"
+      id="newOrderDate"
       dateFormat="MMM d, yyyy"
       datePlaceholder="{{ self.dateFormat.toUpperCase() }}"
       iconBefore="bold/interface-calendar"
@@ -58,7 +58,7 @@
       value="{{ new Date() }}"
     />
     <TextArea
-      id="textArea3"
+      id="newOrderDescription"
       autoResize={true}
       label="Description"
       labelPosition="top"
@@ -66,7 +66,7 @@
       placeholder="Enter value"
     />
     <Select
-      id="newOrderAsset"
+      id="newOrderAssetSelection"
       data="{{ getAssets.data }}"
       emptyMessage="No options"
       hidden="{{ newOrderType.value === 'New' }}"
@@ -75,7 +75,9 @@
       labels="{{ item.name }}"
       overlayMaxHeight={375}
       placeholder="Select an exisiting asset"
+      showClear={true}
       showSelectionIndicator={true}
+      value=""
       values="{{ item.id }}"
     />
     <Form
@@ -102,7 +104,7 @@
       </Header>
       <Body>
         <Select
-          id="select5"
+          id="newOrderAssetType"
           data="{{ getAllTypes.value }}"
           emptyMessage="No options"
           formDataKey="type"
@@ -116,7 +118,7 @@
           values="{{ item }}"
         />
         <TextInput
-          id="textInput7"
+          id="newOrderAssetMedia"
           formDataKey="media"
           iconBefore="bold/interface-link"
           label="Media"
@@ -125,7 +127,7 @@
           placeholder="retool.com"
         />
         <TextInput
-          id="textInput6"
+          id="newOrderAssetName"
           formDataKey="name"
           label="Name"
           labelPosition="top"
@@ -133,7 +135,7 @@
           required={true}
         />
         <TextArea
-          id="textArea2"
+          id="newOrderAssetDescription"
           autoResize={true}
           label="Description"
           labelPosition="top"
@@ -141,41 +143,33 @@
           placeholder="Enter value"
         />
         <Select
-          id="select6"
+          id="newOrderAssetLanguage"
+          data="{{ languages.value }}"
           emptyMessage="No options"
           formDataKey="language"
-          itemMode="static"
           label="Language"
           labelPosition="top"
-          labels={null}
+          labels="{{ item.name }}"
           overlayMaxHeight={375}
           placeholder="Select an option"
           showSelectionIndicator={true}
-          values={null}
-        >
-          <Option id="03b20" value="Option 1" />
-          <Option id="9be6a" value="Option 2" />
-          <Option id="16b6b" value="Option 3" />
-        </Select>
+          values="{{ item.name }}"
+        />
         <Select
-          id="select7"
+          id="newOrderAssetCountry"
+          data="{{ countries.value }}"
           emptyMessage="No options"
           formDataKey="country"
-          itemMode="static"
           label="Country"
           labelPosition="top"
-          labels={null}
+          labels="{{ item.name }}"
           overlayMaxHeight={375}
           placeholder="Select an option"
           showSelectionIndicator={true}
-          values={null}
-        >
-          <Option id="1b85d" value="Option 1" />
-          <Option id="5aedc" value="Option 2" />
-          <Option id="0a4c8" value="Option 3" />
-        </Select>
+          values="{{ item.name }}"
+        />
         <NumberInput
-          id="numberInput1"
+          id="newOrderAssetSpend"
           currency="USD"
           format="currency"
           formDataKey="spend"
@@ -192,6 +186,16 @@
     </Form>
   </Body>
   <Footer>
-    <Button id="button3" text="Save & Submit" />
+    <Button id="button3" submitTargetId="" text="Save & Submit">
+      <Event
+        event="click"
+        method="trigger"
+        params={{ ordered: [] }}
+        pluginId="createOrderProcess"
+        type="datasource"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </Button>
   </Footer>
 </DrawerFrame>

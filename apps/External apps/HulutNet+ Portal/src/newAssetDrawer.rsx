@@ -49,20 +49,20 @@
       values=""
     />
     <TextInput
-      id="textInput4"
+      id="newAssetMedia"
       iconBefore="bold/interface-link"
       label="Link to Media"
       labelPosition="top"
       placeholder="Enter value"
     />
     <TextInput
-      id="textInput5"
+      id="newAssetName"
       label="Name"
       labelPosition="top"
       placeholder="Enter name of asset"
     />
     <TextArea
-      id="textArea1"
+      id="newAssetDescription"
       autoResize={true}
       label="Description"
       labelPosition="top"
@@ -71,33 +71,29 @@
       placeholder="Enter descirption of asset"
     />
     <Select
-      id="select3"
+      id="newAssetLanguage"
+      data="{{ languages.value }}"
       emptyMessage="No options"
-      itemMode="static"
       label="Language"
       labelPosition="top"
+      labels="{{ item.name }}"
       overlayMaxHeight={375}
       placeholder="Select asset language"
       showSelectionIndicator={true}
-    >
-      <Option id="1e4d8" value="Option 1" />
-      <Option id="0aa78" value="Option 2" />
-      <Option id="a606e" value="Option 3" />
-    </Select>
+      values="{{ item.name }}"
+    />
     <Select
-      id="select4"
+      id="newAssetCountry"
+      data="{{ countries.value }}"
       emptyMessage="No options"
-      itemMode="static"
       label="Country"
       labelPosition="top"
+      labels="{{ item.name }}"
       overlayMaxHeight={375}
       placeholder="Select asset country origin"
       showSelectionIndicator={true}
-    >
-      <Option id="1e4d8" value="Option 1" />
-      <Option id="0aa78" value="Option 2" />
-      <Option id="a606e" value="Option 3" />
-    </Select>
+      values="{{ item.name }}"
+    />
     <NumberInput
       id="newAssetSpend"
       currency="USD"
@@ -112,6 +108,16 @@
     />
   </Body>
   <Footer>
-    <Button id="button2" text="Save & Submit" />
+    <Button id="button2" text="Save & Submit">
+      <Event
+        event="click"
+        method="trigger"
+        params={{ ordered: [] }}
+        pluginId="addAsset"
+        type="datasource"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </Button>
   </Footer>
 </DrawerFrame>

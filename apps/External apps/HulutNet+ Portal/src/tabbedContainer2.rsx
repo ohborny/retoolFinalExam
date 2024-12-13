@@ -47,17 +47,17 @@
       verticalAlign="center"
     />
     <Button
-      id="saveDetailsButton2"
+      id="saveAssetDetailsButton"
       hidden="{{ assetState.value === 'View'}}"
       iconBefore="bold/interface-content-save"
       style={{ ordered: [] }}
     >
       <Event
         event="click"
-        method="setValue"
-        params={{ ordered: [{ value: "View" }] }}
-        pluginId="assetState"
-        type="state"
+        method="trigger"
+        params={{ ordered: [] }}
+        pluginId="updateAsset"
+        type="datasource"
         waitMs="0"
         waitType="debounce"
       />
@@ -78,7 +78,7 @@
       volume={1}
     />
     <TextInput
-      id="textInput3"
+      id="selectedAssetLink"
       hidden="{{ assetState.value === 'View'}}"
       iconBefore="bold/interface-link"
       label="Asset Link"
@@ -114,26 +114,32 @@
       values=""
     />
     <Select
-      id="select2"
+      id="selectLanguage"
+      data="{{ languages.value }}"
       disabled="{{ assetState.value === 'View'}}"
       emptyMessage="No options"
       label="Language"
       labelPosition="top"
+      labels="{{ item.name }}"
       overlayMaxHeight={375}
       placeholder="Select language"
       showSelectionIndicator={true}
       value="{{ assetsTable.selectedRow.language }}"
+      values="{{ item.name }}"
     />
     <Select
       id="selectedCountry"
+      data="{{ countries.value }}"
       disabled="{{ assetState.value === 'View'}}"
       emptyMessage="No options"
       label="Country"
       labelPosition="top"
+      labels="{{ item.name }}"
       overlayMaxHeight={375}
       placeholder="Select country"
       showSelectionIndicator={true}
       value="{{ assetsTable.selectedRow.country }}"
+      values="{{ item.name }}"
     />
     <NumberInput
       id="selectedSpend"
