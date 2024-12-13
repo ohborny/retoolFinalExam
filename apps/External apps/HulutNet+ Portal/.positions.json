@@ -546,6 +546,10 @@
       }
     }
   },
+  "image1": {
+    "row": 7.2,
+    "col": 2
+  },
   "lineChart1": {
     "container": "tabbedContainer3",
     "subcontainer": "57395",
