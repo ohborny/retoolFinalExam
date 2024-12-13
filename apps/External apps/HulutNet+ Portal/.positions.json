@@ -358,6 +358,20 @@
       }
     }
   },
+  "container17": {
+    "container": "tabbedContainer3",
+    "subcontainer": "57395",
+    "height": 0.2,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
   "container3": {
     "row": 0.6,
     "height": 0.2,
@@ -546,13 +560,10 @@
       }
     }
   },
-  "image1": {
-    "row": 7.2,
-    "col": 2
-  },
   "lineChart1": {
     "container": "tabbedContainer3",
     "subcontainer": "57395",
+    "row": 3.8,
     "col": 1,
     "height": 7.6,
     "width": 10,
@@ -941,9 +952,40 @@
       }
     }
   },
-  "statistic1": {
-    "container": "tabbedContainer3",
-    "subcontainer": "89911",
+  "statistic5": {
+    "container": "container17",
+    "subcontainer": "62635",
+    "row": 0.2,
+    "height": 0.8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "statistic6": {
+    "container": "container17",
+    "subcontainer": "62635",
+    "row": 0.2,
+    "col": 3,
+    "height": 0.8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "statistic7": {
+    "container": "container17",
+    "subcontainer": "62635",
+    "row": 0.2,
+    "col": 6,
     "height": 0.8,
     "stackPosition": {
       "object": {
@@ -954,14 +996,15 @@
       }
     }
   },
-  "statistic2": {
-    "container": "tabbedContainer3",
-    "subcontainer": "89911",
-    "col": 3,
+  "statistic8": {
+    "container": "container17",
+    "subcontainer": "62635",
+    "row": 0.2,
+    "col": 9,
     "height": 0.8,
     "stackPosition": {
       "object": {
-        "ordinal": 1,
+        "ordinal": 3,
         "widthType": "fixed",
         "width": 0,
         "height": 0

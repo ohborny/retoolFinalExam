@@ -20,7 +20,87 @@
       <Option id="5b3dd" value="Tab 3" />
     </Tabs>
   </Header>
-  <View id="57395" viewKey="Orders Over Time">
+  <View id="57395" viewKey="Orders Metrics">
+    <Container
+      id="container17"
+      footerPadding="4px 12px"
+      headerPadding="4px 12px"
+      padding="12px"
+      showBody={true}
+    >
+      <View id="62635" viewKey="View 1">
+        <Statistic
+          id="statistic5"
+          currency="USD"
+          decimalPlaces="2"
+          formattingStyle="percent"
+          icon="bold/money-graph-arrow-increase"
+          label="Delivery Rate"
+          labelCaption="Since last month"
+          positiveTrend="{{ self.value >= 0 }}"
+          secondaryCurrency="USD"
+          secondaryEnableTrend={true}
+          secondaryFormattingStyle="percent"
+          secondaryPositiveTrend="{{ self.secondaryValue >= 0 }}"
+          secondaryShowSeparators={true}
+          secondarySignDisplay="trendArrows"
+          secondaryValue=""
+          showSeparators={true}
+          value="{{ deliveryRate.value.deliveryRate / 100 }}"
+        />
+        <Statistic
+          id="statistic6"
+          currency="USD"
+          icon="bold/interface-add-1"
+          label="Orders Placed"
+          labelCaption="This Month"
+          positiveTrend="{{ self.value >= 0 }}"
+          secondaryCurrency="USD"
+          secondaryEnableTrend={true}
+          secondaryFormattingStyle="percent"
+          secondaryPositiveTrend="{{ self.secondaryValue >= 0 }}"
+          secondaryShowSeparators={true}
+          secondarySignDisplay="trendArrows"
+          secondaryValue=""
+          showSeparators={true}
+          value="{{ transformer9.value.totalOrdersPlaced }}"
+        />
+        <Statistic
+          id="statistic7"
+          currency="USD"
+          icon="bold/interface-page-controller-loading-1"
+          label="In Progress"
+          labelCaption="Current"
+          positiveTrend="{{ self.value >= 0 }}"
+          secondaryCurrency="USD"
+          secondaryEnableTrend={true}
+          secondaryFormattingStyle="percent"
+          secondaryPositiveTrend="{{ self.secondaryValue >= 0 }}"
+          secondaryShowSeparators={true}
+          secondarySignDisplay="trendArrows"
+          secondaryValue=""
+          showSeparators={true}
+          value="{{ orderStatuses.value.totalOrdersInProgress}}"
+        />
+        <Statistic
+          id="statistic8"
+          currency="USD"
+          icon="bold/interface-validation-check"
+          label="Delivered"
+          labelCaption="This Month"
+          positiveTrend="{{ self.value >= 0 }}"
+          secondaryCurrency="USD"
+          secondaryEnableTrend={true}
+          secondaryFormattingStyle="percent"
+          secondaryPositiveTrend="{{ self.secondaryValue >= 0 }}"
+          secondaryShowSeparators={true}
+          secondarySignDisplay="trendArrows"
+          secondaryValue=""
+          showSeparators={true}
+          value="{{transformer9.value.totalOrdersDelivered}}"
+        />
+      </View>
+    </Container>
     <Chart
       id="lineChart1"
       barMode="group"
@@ -301,40 +381,5 @@
         zDataMode="manual"
       />
     </Chart>
-  </View>
-  <View id="89911" viewKey="Delivery Rate ">
-    <Statistic
-      id="statistic1"
-      currency="USD"
-      formattingStyle="percent"
-      label="Delivery Rate"
-      labelCaption="Since last month"
-      positiveTrend="{{ self.value >= 0 }}"
-      secondaryCurrency="USD"
-      secondaryEnableTrend={true}
-      secondaryFormattingStyle="percent"
-      secondaryPositiveTrend="{{ self.secondaryValue >= 0 }}"
-      secondaryShowSeparators={true}
-      secondarySignDisplay="trendArrows"
-      secondaryValue="0.02"
-      showSeparators={true}
-      value={7552.8}
-    />
-    <Statistic
-      id="statistic2"
-      currency="USD"
-      label="Orders Placed"
-      labelCaption="Current"
-      positiveTrend="{{ self.value >= 0 }}"
-      secondaryCurrency="USD"
-      secondaryEnableTrend={true}
-      secondaryFormattingStyle="percent"
-      secondaryPositiveTrend="{{ self.secondaryValue >= 0 }}"
-      secondaryShowSeparators={true}
-      secondarySignDisplay="trendArrows"
-      secondaryValue=""
-      showSeparators={true}
-      value="{{ transformer7.value}}"
-    />
   </View>
 </Container>

@@ -5,4 +5,11 @@ function countOrdersWithStatus(data, targetStatus) {
 }
 
 const totalOrdersPlaced = countOrdersWithStatus(data, "Order Placed");
-return totalOrdersPlaced;
+const totalOrdersInProgress = countOrdersWithStatus(data, "In Progress");
+const totalOrdersDelivered = countOrdersWithStatus(data, "Delivered");
+
+return {
+  totalOrdersPlaced,
+  totalOrdersInProgress,
+  totalOrdersDelivered
+};

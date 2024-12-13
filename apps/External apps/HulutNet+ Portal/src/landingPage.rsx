@@ -101,13 +101,5 @@
         </View>
       </Container>
     </ListViewBeta>
-    <Image
-      id="image1"
-      heightType="fixed"
-      horizontalAlign="center"
-      retoolStorageFileId="fe651d65-7da4-4d25-91a6-fba9853933fd"
-      src="https://picsum.photos/id/1025/800/600"
-      srcType="retoolStorageFileId"
-    />
   </Frame>
 </Screen>
