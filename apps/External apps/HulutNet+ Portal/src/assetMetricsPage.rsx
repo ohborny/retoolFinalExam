@@ -40,15 +40,17 @@
       '["Art Piece", "Video Clip", "Trailer", "Billboard", "Social Media Post"]'
     }
   />
-  <State
-    id="variable12"
-    value={
-      '{\n"Art Piece": "E5C009",\n"Video Clip": "08415C",\n"Trailer": "84BCDA",\n"Billboard":"CC2936",\n"Social Media Post": "499F68"\n}'
-    }
+  <Function
+    id="orderStatuses"
+    funcBody={include("../lib/orderStatuses.js", "string")}
   />
   <Function
-    id="transformer7"
-    funcBody={include("../lib/transformer7.js", "string")}
+    id="deliveryRate"
+    funcBody={include("../lib/deliveryRate.js", "string")}
+  />
+  <Function
+    id="transformer9"
+    funcBody={include("../lib/transformer9.js", "string")}
   />
   <Frame
     id="$main5"
