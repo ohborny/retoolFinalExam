@@ -1,1 +1,1 @@
-select * from support_chat where customer_email = {{ current_user.email }} order by id
+select * from support_chat where customer_email = {{ current_user.email }} order by id DESC

@@ -1,0 +1,1 @@
+delete from gpt_chat_sessions where id = {{listbox1.value}}

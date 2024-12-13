@@ -6,7 +6,7 @@
     "pageCodeFolders": {
       "object": {
         "page1": {
-          "array": []
+          "array": ["chats", "session"]
         },
         "page2": {
           "array": []
@@ -35,7 +35,7 @@
       }
     },
     "rootScreen": "landingPage",
-    "version": "3.125.0",
+    "version": "3.129.0",
     "experimentalDataTabEnabled": true
   }
 }

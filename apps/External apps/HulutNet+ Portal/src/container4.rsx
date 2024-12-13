@@ -15,7 +15,7 @@
     <Text
       id="text12"
       horizontalAlign="center"
-      style={{ ordered: [] }}
+      style={{ ordered: [{ color: "{{ orderStatusColors.value[item] }}" }] }}
       value="{{ item.status}}"
       verticalAlign="center"
     />

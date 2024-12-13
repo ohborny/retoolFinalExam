@@ -1,5 +1,6 @@
 <SplitPaneFrame
   id="splitPaneFrame1"
+  enableFullBleed={true}
   footerPadding="8px 12px"
   headerPadding="8px 12px"
   isHiddenOnMobile={true}
@@ -21,7 +22,7 @@
     <View id="8c891" viewKey="View 1">
       <ListViewBeta
         id="listView4"
-        _primaryKeys="{{ i }}"
+        _primaryKeys=""
         data="{{ messages.value }}"
         itemWidth="200px"
         margin="0"
@@ -68,6 +69,7 @@
             margin="0"
             padding="0"
             showBody={true}
+            style={{ ordered: [{ border: "rgba(224, 224, 224, 0)" }] }}
           >
             <Header>
               <Text
@@ -86,9 +88,35 @@
                 <Event
                   event="click"
                   method="trigger"
-                  params={{ ordered: [] }}
-                  pluginId="addMessage2"
+                  params={{
+                    ordered: [
+                      {
+                        options: {
+                          object: {
+                            onSuccess: null,
+                            onFailure: null,
+                            additionalScope: null,
+                          },
+                        },
+                      },
+                    ],
+                  }}
+                  pluginId="addMessage"
                   type="datasource"
+                  waitMs="0"
+                  waitType="debounce"
+                />
+                <Event
+                  event="click"
+                  method="setIn"
+                  params={{
+                    ordered: [
+                      { value: "{{ chatMessageInput.value }}" },
+                      { keyPath: "['text']" },
+                    ],
+                  }}
+                  pluginId="selectedThread"
+                  type="state"
                   waitMs="0"
                   waitType="debounce"
                 />
@@ -98,14 +126,47 @@
                 iconBefore="bold/interface-arrows-round-right"
                 style={{ ordered: [] }}
                 styleVariant="outline"
-                tooltipText="Reset"
-              />
+                tooltipText="Clear"
+              >
+                <Event
+                  event="click"
+                  method="clearValue"
+                  params={{ ordered: [] }}
+                  pluginId="chatMessageInput"
+                  type="widget"
+                  waitMs="0"
+                  waitType="debounce"
+                />
+              </Button>
             </View>
             <Event
               event="click"
               method="trigger"
               params={{ ordered: [] }}
               pluginId="addMessage"
+              type="datasource"
+              waitMs="0"
+              waitType="debounce"
+            />
+            <Event
+              event="click"
+              method="setIn"
+              params={{
+                ordered: [
+                  { keyPath: "['data.text']" },
+                  { value: "{{ chatMessageInput.value }}" },
+                ],
+              }}
+              pluginId="selectedThread"
+              type="state"
+              waitMs="0"
+              waitType="debounce"
+            />
+            <Event
+              event="click"
+              method="trigger"
+              params={{ ordered: [] }}
+              pluginId="generateResponse"
               type="datasource"
               waitMs="0"
               waitType="debounce"
@@ -117,7 +178,6 @@
             label=""
             labelPosition="top"
             minLines="4"
-            value="{{ generateResponse.data }}"
           />
         </View>
       </Container>

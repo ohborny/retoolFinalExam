@@ -72,7 +72,7 @@
           <Text
             id="text5"
             hidden="{{ item.available === true }}"
-            style={{ ordered: [{ color: "warning" }] }}
+            style={{ ordered: [{ color: "danger" }] }}
             value="**Coming Soon!**"
             verticalAlign="center"
           />

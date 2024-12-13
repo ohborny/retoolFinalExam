@@ -1,0 +1,15 @@
+{
+  "orderType": {{ newOrderType.selectedItem.value }},
+  "deadline": {{  newOrderDate.value}},
+  "orderDescription": {{ newOrderDescription.value }},
+  "orderedBy": {{ current_user.email }},
+  "assetId": {{ newOrderAssetSelection.selectedItem }},
+  "assetName": {{ newOrderAssetSelection.selectedLabel }},
+  "newAssetType": {{ newOrderAssetType.selectedItem }},
+  "newAssetMedia": {{ newOrderAssetMedia.value }},
+  "newAssetName": {{ newOrderAssetName.value }},
+  "newAssetDescription": {{ newOrderAssetDescription.value }},
+  "newAssetLanguage": {{ newOrderAssetCountry.selectedItem }},
+  "newAssetCountry": {{ newOrderAssetCountry.selectedItem }},
+  "newAssetSpend": {{ newOrderAssetSpend.value }}
+}
