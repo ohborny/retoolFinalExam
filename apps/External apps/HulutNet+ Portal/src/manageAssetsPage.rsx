@@ -626,6 +626,7 @@
       showBorder={true}
       showFooter={true}
       showHeader={true}
+      style={{}}
       templatePageSize="25"
       toolbarPosition="bottom"
     >

@@ -74,6 +74,16 @@
 "
         screenTargetId="settingsPage"
       />
+      <Option
+        id="498f0"
+        appTarget="dcc75d50-b8d6-11ef-8155-f38bd34144f9"
+        disabled={false}
+        hidden="{{ !current_user.groups.map(group => group.name).includes('admin') }}"
+        icon="bold/interface-file-clipboard-text"
+        iconPosition="left"
+        itemType="app"
+        label="Tasks"
+      />
     </Navigation>
   </Body>
   <Footer>
