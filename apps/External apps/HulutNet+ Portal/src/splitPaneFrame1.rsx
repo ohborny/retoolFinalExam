@@ -12,8 +12,11 @@
 >
   <Container
     id="container10"
+    enableFullBleed={true}
     footerPadding="12px {{ viewport.width < 1200 ? 12: (viewport.width-1200)/2}}px"
     headerPadding="14px {{ viewport.width < 1200 ? 12: (viewport.width-1200)/2}}px"
+    heightType="fixed"
+    overflowType="hidden"
     padding="12px {{ viewport.width < 1200 ? 12: (viewport.width-1200)/2}}px"
     showBody={true}
     showFooter={true}

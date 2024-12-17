@@ -171,7 +171,6 @@
   "button11": {
     "container": "mainCanvasContainer",
     "subcontainer": "bdc9c",
-    "row": 0,
     "height": 0.8,
     "stackPosition": {
       "object": {
@@ -187,6 +186,12 @@
     "subcontainer": "38982",
     "row": 1,
     "col": 10,
+    "height": 1,
+    "width": 2
+  },
+  "button13": {
+    "row": 1.2,
+    "col": 7,
     "height": 1,
     "width": 2
   },
@@ -290,7 +295,7 @@
   },
   "container10": {
     "subcontainer": "splitPaneFrame1",
-    "height": 19.8,
+    "height": 19.6,
     "width": 12,
     "stackPosition": {
       "object": {
@@ -345,7 +350,6 @@
   "container15": {
     "container": "mainCanvasContainer",
     "rowGroup": "footer",
-    "row": 0,
     "col": 2,
     "height": 0.2,
     "width": 8,
@@ -548,7 +552,6 @@
     "container": "container10",
     "rowGroup": "footer",
     "subcontainer": "8c891",
-    "row": 0.2,
     "height": 3.8,
     "width": 12,
     "stackPosition": {
@@ -636,7 +639,6 @@
   "listbox1": {
     "container": "container8",
     "subcontainer": "f7da6",
-    "row": 0,
     "height": 28.4,
     "width": 12
   },
@@ -781,7 +783,6 @@
   "progressCircle1": {
     "container": "container15",
     "subcontainer": "38982",
-    "row": 0,
     "col": 10,
     "height": 1,
     "width": 2
@@ -1371,7 +1372,6 @@
   "textInput3": {
     "container": "container15",
     "subcontainer": "38982",
-    "row": 0,
     "height": 0.2,
     "width": 10
   },
