@@ -600,6 +600,7 @@
     </Container>
     <Table
       id="assetsTable"
+      autoColumnWidth={true}
       cellSelection="none"
       clearChangesetOnSave={true}
       data="{{ filterAssets.value }}"
@@ -797,6 +798,7 @@
         />
       </ToolbarButton>
     </Table>
+    <Button id="button13" text="Export Data" />
     <Include src="./tabbedContainer2.rsx" />
   </Frame>
 </Screen>

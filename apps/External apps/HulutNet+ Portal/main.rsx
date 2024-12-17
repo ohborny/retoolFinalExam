@@ -1,11 +1,5 @@
 <App>
-  <Include src="./src/assetMetricsPage.rsx" />
-  <Include src="./src/assetPage.rsx" />
-  <Include src="./src/chatAssistPage.rsx" />
-  <Include src="./src/landingPage.rsx" />
-  <Include src="./src/manageAssetsPage.rsx" />
-  <Include src="./src/settingsPage.rsx" />
-  <Include src="./src/page1.rsx" />
+  <AppStyles id="$appStyles" css="" />
   <CustomAppTheme
     id="$appTheme"
     _migrated={true}
@@ -42,7 +36,13 @@
     textLight="#ffffff"
     warning="#cd6f00"
   />
-  <AppStyles id="$appStyles" css="" />
+  <Include src="./src/assetMetricsPage.rsx" />
+  <Include src="./src/assetPage.rsx" />
+  <Include src="./src/chatAssistPage.rsx" />
+  <Include src="./src/landingPage.rsx" />
+  <Include src="./src/manageAssetsPage.rsx" />
+  <Include src="./src/page1.rsx" />
+  <Include src="./src/settingsPage.rsx" />
   <Include src="./header.rsx" />
   <Include src="./sidebar.rsx" />
 </App>

@@ -46,6 +46,25 @@
     </Button>
   </Header>
   <View id="bdc9c" viewKey="View 1">
+    <Button
+      id="button11"
+      iconAfter="bold/interface-edit-write-1"
+      loading="{{addSession.isFetching}}"
+      margin="0"
+      marginType="normal"
+      style={{ ordered: [{ borderRadius: "24px" }] }}
+      text="New thread"
+    >
+      <Event
+        event="click"
+        method="trigger"
+        params={{ ordered: [] }}
+        pluginId="handleNewThread"
+        type="datasource"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </Button>
     <ListViewBeta
       id="chatListView"
       _primaryKeys="{{ item.id }}"
@@ -94,25 +113,6 @@
         </View>
       </Container>
     </ListViewBeta>
-    <Button
-      id="button11"
-      iconAfter="bold/interface-edit-write-1"
-      loading="{{addSession.isFetching}}"
-      margin="0"
-      marginType="normal"
-      style={{ ordered: [{ borderRadius: "24px" }] }}
-      text="New thread"
-    >
-      <Event
-        event="click"
-        method="trigger"
-        params={{ ordered: [] }}
-        pluginId="handleNewThread"
-        type="datasource"
-        waitMs="0"
-        waitType="debounce"
-      />
-    </Button>
     <Container
       id="container8"
       enableFullBleed={true}
