@@ -1,4 +1,4 @@
-id: summarizeOrder
+id: summarizeInfo
 type: datasource
 subtype: RetoolAIQuery
 resourceName: retool_ai
@@ -116,12 +116,12 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2024-12-13T14:01:07.323Z
+createdAt: 2024-12-17T21:50:25.818Z
 blockData:
-  top: -96
-  left: 224
-  uuid: a2b1bb5b-66b4-4b38-8d48-5797bef2e298
-  pluginId: summarizeOrder
+  top: 16
+  left: 272
+  uuid: d1cccd9e-593c-456b-979d-4e0807a8021a
+  pluginId: summarizeInfo
   blockType: default
   editorType: RetoolAIQuery
   resourceName: retool_ai
