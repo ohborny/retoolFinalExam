@@ -17,9 +17,10 @@
     persistedValueKey=""
     persistValue={false}
     value={
-      '[\n    {\n        "name": "Asset Management",\n        "description": "Observe all available assets and request new assets or place new orders",\n        "pageName": "manageAssetsPage",\n        "available": true\n    },\n    {\n        "name": "Asset Metrics",\n        "description": "View the usage and dive into the data behind assets and orders.",\n        "url": "assetMetricsPage",\n        "available": true\n    },\n    {\n        "name": "Portfolio Optimization",\n        "description": "Powered by AI, we will give you suggestions on the best way to optimize your portfolio.",\n        "url": null,\n        "available": false\n    }\n]'
+      '[\n    {\n        "name": "Asset Management",\n        "description": "Observe all available assets and request new assets or place new orders",\n        "pageName": "manageAssetsPage",\n        "roles": [ "All Users" ],\n        "available": true\n    },\n    {\n        "name": "Asset Metrics",\n        "description": "View the usage and dive into the data behind assets and orders.",\n        "url": "assetMetricsPage",\n        "roles": [ "Marketing", "admin" ],\n        "available": true\n    },\n    {\n        "name": "Portfolio Optimization",\n        "description": "Powered by AI, we will give you suggestions on the best way to optimize your portfolio.",\n        "url": null,\n        "roles": [ "All Users" ],\n        "available": false\n    }\n]'
     }
   />
+  <State id="variable12" value="{{ current_user }}" />
   <Frame
     id="$main2"
     enableFullBleed={false}
