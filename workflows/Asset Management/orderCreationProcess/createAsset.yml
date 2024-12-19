@@ -1,0 +1,119 @@
+id: createAsset
+type: datasource
+subtype: SqlQueryUnified
+resourceName: d9c5c06e-96c2-4e05-bb4a-f48d18865ba6
+resourceDisplayName: retool_db
+template:
+  ordered:
+    - queryRefreshTime: ''
+    - allowedGroupIds: []
+    - streamResponse: false
+    - records: ''
+    - lastReceivedFromResourceAt: null
+    - databasePasswordOverride: ''
+    - queryDisabledMessage: ''
+    - servedFromCache: false
+    - offlineUserQueryInputs: ''
+    - successMessage: ''
+    - queryDisabled: ''
+    - playgroundQuerySaveId: latest
+    - workflowParams: null
+    - resourceNameOverride: ''
+    - runWhenModelUpdates: false
+    - showFailureToaster: true
+    - query: >-
+        INSERT INTO asset_management (Name, Type, Media, Description, Language,
+        Country, Spend)
+
+        VALUES ({{startTrigger.data.newAssetName}},
+        {{startTrigger.data.newAssetType}}, {{startTrigger.data.newAssetMedia}},
+        {{startTrigger.data.newAssetDescription}},
+        {{startTrigger.data.newAssetLanguage}},
+        {{startTrigger.data.newAssetCountry}},
+        {{startTrigger.data.newAssetSpend}})
+
+        RETURNING id;
+    - playgroundQueryUuid: ''
+    - playgroundQueryId: null
+    - error: null
+    - workflowRunBodyType: raw
+    - privateParams: []
+    - queryRunOnSelectorUpdate: false
+    - runWhenPageLoadsDelay: ''
+    - warningCodes: []
+    - data: null
+    - recordId: ''
+    - importedQueryInputs:
+        ordered: []
+    - _additionalScope: []
+    - isImported: false
+    - showSuccessToaster: true
+    - dataArray: []
+    - cacheKeyTtl: ''
+    - filterBy: ''
+    - requestSentTimestamp: null
+    - databaseHostOverride: ''
+    - metadata: null
+    - editorMode: sql
+    - queryRunTime: null
+    - actionType: ''
+    - changesetObject: ''
+    - shouldUseLegacySql: false
+    - offlineOptimisticResponse: null
+    - errorTransformer: return data.error
+    - finished: null
+    - databaseNameOverride: ''
+    - confirmationMessage: null
+    - isFetching: false
+    - changeset: ''
+    - rawData: null
+    - queryTriggerDelay: '0'
+    - resourceTypeOverride: null
+    - watchedParams: []
+    - enableErrorTransformer: false
+    - databaseWarehouseOverride: ''
+    - enableBulkUpdates: false
+    - showLatestVersionUpdatedWarning: false
+    - timestamp: 0
+    - evalType: script
+    - importedQueryDefaults:
+        ordered: []
+    - enableTransformer: false
+    - showUpdateSetValueDynamicallyToggle: true
+    - overrideOrgCacheForUserCache: false
+    - bulkUpdatePrimaryKey: ''
+    - runWhenPageLoads: false
+    - transformer: return data
+    - events: []
+    - tableName: asset_management
+    - queryTimeout: '10000'
+    - workflowId: null
+    - requireConfirmation: false
+    - queryFailureConditions: ''
+    - changesetIsObject: false
+    - enableCaching: false
+    - allowedGroups: []
+    - databaseUsernameOverride: ''
+    - databaseRoleOverride: ''
+    - shouldEnableBatchQuerying: false
+    - doNotThrowOnNoOp: false
+    - offlineQueryType: None
+    - queryThrottleTime: '750'
+    - updateSetValueDynamically: false
+    - notificationDuration: ''
+createdAt: 2024-12-05T20:03:51.336Z
+blockData:
+  top: -368
+  left: 1216
+  uuid: d9e96586-1e77-455f-8c25-bb031611b842
+  pluginId: createAsset
+  blockType: default
+  dimensions:
+    width: 432
+    height: 512
+  editorType: SqlQueryUnified
+  resourceName: d9c5c06e-96c2-4e05-bb4a-f48d18865ba6
+  incomingPorts:
+    - portId: 0f3f679e-a219-438b-a7c2-baef70ba67ca
+      blockId: 88029d1d-77c5-4d73-9b21-8130b823616d
+  incomingOnSuccessEdges: []
