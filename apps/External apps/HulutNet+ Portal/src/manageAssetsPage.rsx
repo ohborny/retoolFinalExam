@@ -798,7 +798,6 @@
         />
       </ToolbarButton>
     </Table>
-    <Button id="button13" text="Export Data" />
     <Include src="./tabbedContainer2.rsx" />
   </Frame>
 </Screen>
