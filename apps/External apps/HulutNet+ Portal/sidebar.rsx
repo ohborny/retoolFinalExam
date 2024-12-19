@@ -46,7 +46,7 @@
       />
       <Option
         id="9d100"
-        disabled="{{ !current_user.groups.map(group => group.name).includes('Marketing' && 'admin') }}"
+        disabled="{{ !current_user.groups.map(group => group.name).includes('Marketing') && !current_user.groups.map(group => group.name).includes('admin') }}"
         icon="bold/money-graph-bar"
         iconPosition="left"
         itemType="page"
