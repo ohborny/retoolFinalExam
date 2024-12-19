@@ -1,4 +1,4 @@
-id: slackChannel
+id: code1
 type: datasource
 subtype: JavascriptQuery
 resourceName: JavascriptQuery
@@ -18,9 +18,7 @@ template:
     - resourceNameOverride: ''
     - runWhenModelUpdates: false
     - showFailureToaster: true
-    - query: |
-        const slackChannel = "C047TSRLGMV";
-        return slackChannel;
+    - query: return createOrderwithNewAsset.data
     - playgroundQueryUuid: ''
     - playgroundQueryId: null
     - error: null
@@ -72,16 +70,14 @@ template:
     - queryThrottleTime: '750'
     - updateSetValueDynamically: false
     - notificationDuration: ''
-createdAt: 2024-12-12T15:42:39.516Z
+createdAt: 2024-12-19T18:31:58.057Z
 blockData:
-  top: 736
-  left: 3168
-  uuid: 32f0f9f2-501b-40da-8893-48ee8bfa1734
-  pluginId: slackChannel
+  top: -304
+  left: 2496
+  uuid: cbc34757-060c-456c-943b-a3fe8ac8262e
+  pluginId: code1
   blockType: code
   editorType: JavascriptQuery
   resourceName: JavascriptQuery
-  incomingPorts:
-    - portId: 30fcd5b5-d45e-485c-ae56-5b2d105a32bd
-      blockId: b5031376-2ef7-4199-a6c9-38606c7c49fa
-  incomingOnSuccessEdges: []
+  incomingOnSuccessEdges:
+    - fbe758ea-61b2-438b-b873-74b44ccb89ca

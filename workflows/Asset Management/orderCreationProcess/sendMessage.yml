@@ -37,7 +37,7 @@ template:
         {"channel":"{{ slackChannel.data }}","text":"New order submitted by {{
         startTrigger.data.orderedBy }}. \nPlease review at {{
         retoolContext.configVars.env_url
-        }}/apps/dcc75d50-b8d6-11ef-8155-f38bd34144f9/User%20task%20-%20orderCreationProcess"}
+        }}/embedded/public/98fe7571-5d01-4310-8cee-7758a48d4262"}
     - data: null
     - specPathOverride: ''
     - importedQueryInputs:
@@ -91,8 +91,8 @@ template:
     - notificationDuration: ''
 createdAt: 2024-12-12T15:35:55.180Z
 blockData:
-  top: 480
-  left: 3488
+  top: 736
+  left: 3712
   uuid: 814eddad-c46d-4eca-b9ca-38b868bb6cea
   pluginId: sendMessage
   blockType: default

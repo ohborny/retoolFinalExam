@@ -111,5 +111,4 @@ blockData:
       name: waitNotification-b5031376-2ef7-4199-a6c9-38606c7c49fa
       type: waitNotification
   incomingOnSuccessEdges:
-    - fbe758ea-61b2-438b-b873-74b44ccb89ca
     - 32fab7d3-a968-4d97-9479-e2bb9dd32198

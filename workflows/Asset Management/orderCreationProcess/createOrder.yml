@@ -54,7 +54,7 @@ template:
     - confirmationMessage: null
     - isFetching: false
     - changeset: >-
-        [{"key":"status","value":"Order Placed"},{"key":"asset_id","value":"{{
+        [{"key":"status","value":"In Progress"},{"key":"asset_id","value":"{{
         startTrigger.data.assetId.id }}"},{"key":"deadline","value":"{{
         startTrigger.data.deadline }}"},{"key":"ordered_by","value":"{{
         startTrigger.data.orderedBy }}"},{"key":"order_type","value":"{{
